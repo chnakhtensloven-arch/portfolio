@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    /* Palette from user specification:
+       1: #F8DD1B (Vibrant Yellow)
+       2: #F5CE0D (Golden Yellow)
+       3: #DDAC0D (Deep Gold/Amber)
+       4: #121519 (Obsidian Canvas)
+       5: #2E3137 (Charcoal Surface/Border)
+       6: #3F4247 (Slate Highlight)
+       7: #86898B (Cool Gray Metadata)
+    */
+    --primary: #F5CE0D;
+    --primary-bright: #F8DD1B;
+    --primary-deep: #DDAC0D;
+    --surface-canvas: #121519;
+    --surface-card: #181c22;
+    --surface-border: #2E3137;
+    --surface-highlight: #3F4247;
+    --text-muted: #86898B;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #121519;
+  }
+
+  html[dir="rtl"] {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom 3D & ambient lighting styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Glow effects with #F8DD1B & #F5CE0D */
+.glow-gold {
+  box-shadow: 0 0 30px -4px rgba(245, 206, 13, 0.45);
+}
+
+.glow-gold-lg {
+  box-shadow: 0 0 50px -5px rgba(248, 221, 27, 0.65);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(248, 221, 27, 0.7);
+}
+
+.text-glow-subtle {
+  text-shadow: 0 0 16px rgba(245, 206, 13, 0.4);
+}
+
+/* Ambient gradient background using #121519 and golden ribbon highlights */
+.ambient-mesh {
+  background: 
+    radial-gradient(ellipse 85% 55% at 50% -20%, rgba(245, 206, 13, 0.12), transparent 70%),
+    radial-gradient(circle at 10% 40%, rgba(221, 172, 13, 0.06), transparent 45%),
+    radial-gradient(circle at 90% 70%, rgba(248, 221, 27, 0.07), transparent 50%),
+    #121519;
+}
+
+/* 3D Glass card backdrop */
+.glass-panel {
+  background: rgba(24, 28, 34, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #2E3137;
+}
+
+.glass-panel:hover {
+  border-color: rgba(248, 221, 27, 0.45);
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121519;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2E3137;
+  border-radius: 9999px;
+  border: 2px solid #121519;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F5CE0D;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

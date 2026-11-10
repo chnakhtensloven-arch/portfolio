@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title data-i18n="Kinetic Dark Portfolio - nasrou hm"> Portfolio - nasrou hm</title>
+        <!-- Google Fonts: Plus Jakarta Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com">
+        </script>
+        <!-- Font Awesome 6 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <!-- Tailwind Configuration -->
+         <!-- SEO Basics -->
+<meta name="description" content="معرض أعمال ناصر - مطور ويب ومتخصص في إعلانات ميتا والتجارة الإلكترونية. landing pages سريعة ومحتوى إعلاني عالي التحويل." />
+<meta name="keywords" content="nasrou hm, مطور ويب, Meta Ads, e-commerce, landing page, الجزائر, تصميم موقع, web developer portfolio" />
+<meta name="author" content="nasrou hm" />
+
+<!-- Open Graph / Facebook / LinkedIn (لتظهر صورة ومعلومات جميلة عند مشاركة رابط موقعك على فيسبوك أو واتساب) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="معرض أعمال nasrou hm | Web Developer & Meta Ads Specialist" />
+<meta property="og:description" content="تصفح مشاريعي في تطوير الويب وإدارة الحملات الإعلانية المباشرة وتصميم صفحات الهبوط." />
+<meta property="og:image" content="hhh.jpg" />
+<meta property="og:url" content="https://portfolio-nasrou.netlify.app/" />
+
+<!-- Favicon (أيقونة الموقع الصغيرة التي تظهر في التبويب وبجانب الرابط في جوجل) -->
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        },
+                        colors: {
+                            primary: {
+                                DEFAULT: '#FF8C00',
+                                glow: '#FFA500',
+                                hover: '#E07B00',
+                                dark: '#CC7000'
+                            },
+                            surface: {
+                                DEFAULT: '#0D0D0F',
+                                subtle: '#131317',
+                                card: '#1B1B20',
+                                border: '#282830',
+                                highlight: '#2E2E38'
+                            }
+                        },
+                        boxShadow: {
+                            'glow-orange': '0 0 25px -4px rgba(255, 140, 0, 0.45)',
+                            'glow-orange-lg': '0 0 45px -4px rgba(255, 140, 0, 0.65)',
+                            'glow-inner': 'inset 0 0 20px rgba(255, 140, 0, 0.15)'
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="bg-surface text-gray-200 antialiased selection:bg-primary selection:text-black kinetic-ambient-bg">
+        <!-- ==================== HEADER / NAVIGATION ==================== -->
+        <header id="navbar" class="sticky top-0 z-50 backdrop-blur-md bg-surface/85 border-b border-surface-border transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <!-- Brand Logo with Avatar -->
+                <a href="#home" class="flex items-center gap-3.5 group"> <div class="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-primary to-primary-glow group-hover:shadow-glow-orange transition duration-300"> <img src="hhh.jpg" alt="nasrou hm" class="w-full h-full object-cover rounded-full" data-fallback-src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=200&amp;q=80" /> </div> <div class="flex flex-col"> <span class="font-extrabold text-lg tracking-tight text-white group-hover:text-primary transition duration-200"><span id="brand-first-name">nasrou</span> <span id="brand-last-name" class="text-primary font-bold">hm</span></span> <span id="brand-tagline" class="text-[10px] tracking-widest uppercase text-gray-400 font-semibold" data-i18n="Web Dev &amp; Meta Ads"> Web Dev &amp; Meta Ads </span> </div> </a>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-1 bg-surface-subtle/80 px-4 py-1.5 rounded-full border border-surface-border shadow-sm">
+                    <a href="#home" class="nav-link px-4 py-2 text-sm font-medium text-white hover:text-primary transition rounded-full hover:bg-surface-card" data-i18n="Home">Home</a>
+                    <a href="#about" class="nav-link px-4 py-2 text-sm font-medium text-gray-400 hover:text-primary transition rounded-full hover:bg-surface-card" data-i18n="About">About</a>
+                    <a href="#services" class="nav-link px-4 py-2 text-sm font-medium text-gray-400 hover:text-primary transition rounded-full hover:bg-surface-card" data-i18n="Services">Services</a>
+                    <a href="#skills" class="nav-link px-4 py-2 text-sm font-medium text-gray-400 hover:text-primary transition rounded-full hover:bg-surface-card" data-i18n="Skills">Skills</a>
+                    <a href="#projects" class="nav-link px-4 py-2 text-sm font-medium text-gray-400 hover:text-primary transition rounded-full hover:bg-surface-card" data-i18n="Projects">Projects</a>
+                    <a href="#contact" class="nav-link px-4 py-2 text-sm font-medium text-gray-400 hover:text-primary transition rounded-full hover:bg-surface-card" data-i18n="Contact">Contact</a>
+                </nav>
+                <!-- Action Button & Mobile Menu Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-hover text-black font-bold text-sm transition shadow-glow-orange hover:scale-105 active:scale-95 duration-200"> <span data-i18n="Let&#x27;s Talk">Let's Talk</span> </a>
+                    <button id="language-toggle" type="button" class="language-toggle" aria-label="Switch language to Arabic" data-i18n-aria-label="Switch language to Arabic" aria-pressed="false">
+                        <span class="language-toggle__option" data-language-option="ar">AR</span>
+                        <span aria-hidden="true">/</span>
+                        <span class="language-toggle__option is-active" data-language-option="en">EN</span>
+                    </button>
+                    <!-- Mobile Hamburguer Toggle -->
+                    <button id="menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-surface-card border border-surface-border flex items-center justify-center text-gray-300 hover:text-white" aria-label="Toggle navigation menu" data-i18n-aria-label="Toggle navigation menu"> <i class="fas fa-bars text-base"></i> </button>
+                </div>
+            </div>
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-surface-subtle border-b border-surface-border px-6 py-5 space-y-3">
+                <a href="#home" class="block text-sm font-medium text-white hover:text-primary py-2 border-b border-surface-border/50" data-i18n="Home">Home</a><a href="#about" class="block text-sm font-medium text-gray-300 hover:text-primary py-2 border-b border-surface-border/50" data-i18n="About">About</a><a href="#services" class="block text-sm font-medium text-gray-300 hover:text-primary py-2 border-b border-surface-border/50" data-i18n="Services">Services</a><a href="#skills" class="block text-sm font-medium text-gray-300 hover:text-primary py-2 border-b border-surface-border/50" data-i18n="Skills">Skills</a><a href="#projects" class="block text-sm font-medium text-gray-300 hover:text-primary py-2 border-b border-surface-border/50" data-i18n="Projects">Projects</a><a href="#contact" class="block text-sm font-medium text-gray-300 hover:text-primary py-2" data-i18n="Contact">Contact</a>
+                <div class="pt-2"> <a href="#contact" class="block text-center py-3 rounded-full bg-primary text-black font-bold text-sm" data-i18n="Let&#x27;s Talk">Let's Talk</a> </div>
+            </div>
+        </header>
+        <!-- E
+        <main class="max-w-7xl mx-auto px-6 pb-12 space-y-32">
+            <!-- ==================== HERO SECTION ==================== -->
+            <section id="home" class="pt-4 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Status Indicator Pill -->
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-subtle border border-surface-border text-xs font-semibold text-gray-300 shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+                        <span data-i18n="AVAILABLE FOR HIGH-IMPACT PROJECTS">AVAILABLE FOR HIGH-IMPACT PROJECTS</span>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 text-lg font-medium" data-i18n="Hello, it&#x27;s Me">Hello, it's Me</p>
+                        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight"> nasrou <span class="text-primary text-glow">hm</span> </h1>
+                        <h2 class="text-2xl md:text-3xl font-semibold text-gray-300"><span data-i18n="And I'm a">And I'm a</span> <span id="hero-role" class="text-primary underline decoration-primary decoration-4 underline-offset-8" data-i18n="Web Developer">Web Developer</span> <span data-i18n="&">&amp;</span> <span id="hero-specialty" data-i18n="Meta Specialist">Meta Specialist</span></h2>
+                    </div>
+                    <p class="text-gray-400 text-base md:text-lg max-w-xl leading-relaxed"><span data-i18n="Specialized in">Specialized in</span> <strong data-i18n="Web Development" class="text-white">Web Development</strong><span data-i18n=",">,</span> <strong data-i18n="E-commerce Growth" class="text-white">E-commerce Growth</strong><span data-i18n=", and">, and</span> <strong data-i18n="Meta Ads" class="text-white">Meta Ads</strong><span data-i18n=". I build high-converting digital experiences, scalable online stores, and data-driven advertising campaigns that drive real results.">. I build high-converting digital experiences, scalable online stores, and data-driven advertising campaigns that drive real results.</span></p>
+                    <!-- Social Icons Bar -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <a id="github-link" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" data-i18n-aria-label="GitHub Profile" class="w-11 h-11 rounded-full bg-surface-subtle border border-surface-border flex items-center justify-center text-gray-400 hover:text-black hover:bg-primary hover:border-primary transition duration-300 hover:scale-110 shadow-sm"> <i class="fab fa-github text-lg"></i> </a>
+                        <a id="linkedin-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" data-i18n-aria-label="LinkedIn Profile" class="w-11 h-11 rounded-full bg-surface-subtle border border-surface-border flex items-center justify-center text-gray-400 hover:text-black hover:bg-primary hover:border-primary transition duration-300 hover:scale-110 shadow-sm"> <i class="fab fa-linkedin-in text-lg"></i> </a>
+                        <a id="email-link" href="mailto:chnakhtensloven@gmail.com" aria-label="Direct Email" data-i18n-aria-label="Direct Email" class="w-11 h-11 rounded-full bg-surface-subtle border border-surface-border flex items-center justify-center text-gray-400 hover:text-black hover:bg-primary hover:border-primary transition duration-300 hover:scale-110 shadow-sm"> <i class="fas fa-envelope text-lg"></i> </a>
+                        <a id="whatsapp-link" href="https://wa.me/213563277037" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Contact" data-i18n-aria-label="WhatsApp Contact" class="w-11 h-11 rounded-full bg-surface-subtle border border-surface-border flex items-center justify-center text-gray-400 hover:text-black hover:bg-primary hover:border-primary transition duration-300 hover:scale-110 shadow-sm"> <i class="fab fa-whatsapp text-lg"></i> </a>
+                        <a id="instagram-link" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" data-i18n-aria-label="Instagram Profile" class="w-11 h-11 rounded-full bg-surface-subtle border border-surface-border flex items-center justify-center text-gray-400 hover:text-black hover:bg-primary hover:border-primary transition duration-300 hover:scale-110 shadow-sm"> <i class="fab fa-instagram text-lg"></i> </a>
+                    </div>
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="#about" class="px-7 py-3.5 rounded-full bg-primary hover:bg-primary-hover text-black font-bold text-sm tracking-wide transition shadow-glow-orange hover:scale-105 duration-200" data-i18n="More About Me"> More About Me </a>
+                        <a href="#contact" class="px-7 py-3.5 rounded-full bg-surface-subtle hover:bg-surface-card border border-surface-border text-white font-semibold text-sm tracking-wide transition hover:border-gray-500" data-i18n="Let&#x27;s Talk"> Let's Talk </a>
+                    </div>
+                </div>
+                <!-- Hero Visual Circle Showcase with Badges -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-full max-w-full aspect-square sm:max-w-2xl">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full blur-3xl"></div>
+                        <!-- Outer Glowing Ring -->
+                        <div class="relative w-full h-full rounded-full p-2 bg-gradient-to-b from-primary via-surface-border to-transparent shadow-glow-orange-lg">
+                            <div class="w-full h-full rounded-full overflow-hidden bg-black flex items-center justify-center border-4 border-surface">
+                                <img src="hhh.jpg" alt="nasrou hm Hero Showcase" class="w-full h-full object-cover transform scale-105 hover:scale-110 transition duration-700 ease-out" data-fallback-src="https://i.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=600&amp;q=80" />
+                            </div>
+                        </div>
+                        <!-- Floating Stat Badge 1: ROAS -->
+                        <div class="absolute -top-3 -right-3 backdrop-blur-md bg-surface-card/95 border border-surface-border px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 transform hover:scale-105 transition">
+                            <div class="w-9 h-9 rounded-xl bg-primary/20 text-primary flex items-center justify-center"> <i class="fas fa-chart-line"></i> </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-medium" data-i18n="Avg. Meta ROAS">Avg. Meta ROAS</p>
+                                <p class="text-sm font-extrabold text-white">4.5x</p>
+                            </div>
+                        </div>
+                        <!-- Floating Stat Badge 2: Projects Done -->
+                        <div class="absolute -bottom-3 -left-3 backdrop-blur-md bg-surface-card/95 border border-surface-border px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3 transform hover:scale-105 transition">
+                            <div class="w-9 h-9 rounded-xl bg-primary/20 text-primary flex items-center justify-center"> <i class="fas fa-check-circle"></i> </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-medium" data-i18n="Projects Done">Projects Done</p>
+                                <p class="text-sm font-extrabold text-white">50+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==================== ABOUT ME SECTION ==================== -->
+            <section id="about" class="space-y-12">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary" data-i18n="About Me">About Me</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white"><span data-i18n="Web Developer &">Web Developer &amp;</span> <span class="text-primary" data-i18n="Meta Ads Specialist">Meta Ads Specialist</span></h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <!-- Interactive Preview Box -->
+                    <div class="lg:col-span-5">
+                        <div class="bg-surface-card border border-surface-border rounded-2xl p-6 relative overflow-hidden group">
+                            <div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface">
+                                <img src="2em.jpg" alt="About portrait" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" data-fallback-src="https://imag.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=600&amp;q=80" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-6">
+                                    <div class="flex items-center justify-between w-full">
+                                        <span class="text-xs uppercase tracking-wider text-gray-300 font-semibold" data-i18n="Algeria · Remote Global">Algeria · Remote Global</span>
+                                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary border border-primary/40"> <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Active </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bio & Quantitative Metrics -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed" data-i18n="I am a passionate digital creator combining technical web development with strategic e-commerce marketing. With a deep understanding of consumer behavior and modern web technologies, I help brands establish a powerful online presence and scale their revenue."> I am a passionate digital creator combining technical web development with strategic e-commerce marketing. With a deep understanding of consumer behavior and modern web technologies, I help brands establish a powerful online presence and scale their revenue. </p>
+                        <p class="text-gray-400 text-sm md:text-base leading-relaxed" data-i18n="From crafting bespoke, fast-loading e-commerce platforms to launching high-ROI Meta (Facebook &amp; Instagram) ad campaigns, my focus is always on delivering measurable business growth."> From crafting bespoke, fast-loading e-commerce platforms to launching high-ROI Meta (Facebook &amp; Instagram) ad campaigns, my focus is always on delivering measurable business growth. </p>
+                        <!-- 4 Stats Cards -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+                            <div class="bg-surface-card border border-surface-border rounded-2xl p-4 text-center hover:border-primary/50 transition">
+                                <div class="text-3xl font-extrabold text-primary mb-1">3+</div>
+                                <div class="text-xs text-gray-400 font-medium uppercase" data-i18n="Years Experience">Years Experience</div>
+                            </div>
+                            <div class="bg-surface-card border border-surface-border rounded-2xl p-4 text-center hover:border-primary/50 transition">
+                                <div class="text-3xl font-extrabold text-primary mb-1">50+</div>
+                                <div class="text-xs text-gray-400 font-medium uppercase" data-i18n="Projects Done">Projects Done</div>
+                            </div>
+                            <div class="bg-surface-card border border-surface-border rounded-2xl p-4 text-center hover:border-primary/50 transition">
+                                <div class="text-3xl font-extrabold text-primary mb-1">4.5x</div>
+                                <div class="text-xs text-gray-400 font-medium uppercase" data-i18n="Average ROAS">Average ROAS</div>
+                            </div>
+                            <div class="bg-surface-card border border-surface-border rounded-2xl p-4 text-center hover:border-primary/50 transition">
+                                <div class="text-3xl font-extrabold text-primary mb-1">100%</div>
+                                <div class="text-xs text-gray-400 font-medium uppercase" data-i18n="Satisfaction">Satisfaction</div>
+                            </div>
+                        </div>
+                        <div class="pt-2"> <a href="#projects" class="inline-flex items-center gap-2 text-primary hover:text-white font-bold text-sm group transition"> <span data-i18n="View My Work">View My Work</span> <i class="fas fa-arrow-right text-xs transform group-hover:translate-x-1.5 transition"></i> </a> </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==================== SERVICES SECTION ==================== -->
+            <section id="services" class="space-y-12">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary" data-i18n="What I Do">What I Do</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white"><span data-i18n="My">My</span> <span class="text-primary" data-i18n="Services">Services</span></h2>
+                    <p class="text-gray-400 text-sm max-w-md mx-auto" data-i18n="Specialized solutions designed to convert traffic into measurable revenue.">Specialized solutions designed to convert traffic into measurable revenue.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-surface-card border border-surface-border rounded-3xl p-8 hover:border-primary/50 hover:shadow-glow-orange transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-5">
+                            <div class="w-14 h-14 rounded-2xl bg-surface-subtle border border-surface-border flex items-center justify-center text-primary text-2xl group-hover:scale-110 transition"> <i class="fas fa-code"></i> </div>
+                            <h3 class="text-2xl font-bold text-white" data-i18n="Web Development">Web Development</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="Building high-performance, responsive, and SEO-optimized websites using clean and scalable code for businesses and startups."> Building high-performance, responsive, and SEO-optimized websites using clean and scalable code for businesses and startups. </p>
+                            <ul class="space-y-2 text-sm text-gray-300 pt-2">
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="Responsive & Mobile-First">Responsive &amp; Mobile-First</span></li>
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="Fast Page Load Speed">Fast Page Load Speed</span></li>
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="Clean & Modern UI/UX">Clean &amp; Modern UI/UX</span></li>
+                            </ul>
+                        </div>
+                        <div class="pt-8"> <a href="#contact" class="block w-full text-center py-3 rounded-full bg-surface-subtle hover:bg-primary hover:text-black border border-surface-border text-white text-sm font-semibold transition" data-i18n="Order Service"> Order Service </a> </div>
+                    </div>
+                    <!-- Service Card 2 (Featured / Most Popular) -->
+                    <div class="bg-surface-card border-2 border-primary rounded-3xl p-8 shadow-glow-orange transition duration-300 flex flex-col justify-between relative group">
+                        <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-primary text-black font-extrabold text-xs uppercase tracking-wider" data-i18n="Most Popular"> Most Popular </div>
+                        <div class="space-y-5">
+                            <div class="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary text-2xl group-hover:scale-110 transition"> <i class="fas fa-shopping-cart"></i> </div>
+                            <h3 class="text-2xl font-bold text-white" data-i18n="E-Commerce Solutions">E-Commerce Solutions</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="Creating high-converting online stores tailored to maximize sales, reduce cart abandonment, and streamline customer checkout."> Creating high-converting online stores tailored to maximize sales, reduce cart abandonment, and streamline customer checkout. </p>
+                            <ul class="space-y-2 text-sm text-gray-300 pt-2">
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="Shopify & WooCommerce">Shopify &amp; WooCommerce</span></li>
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="Conversion Rate Optimization (CRO)">Conversion Rate Optimization (CRO)</span></li>
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="Payment Gateway Integration">Payment Gateway Integration</span></li>
+                            </ul>
+                        </div>
+                        <div class="pt-8"> <a href="#contact" class="block w-full text-center py-3 rounded-full bg-primary hover:bg-primary-hover text-black text-sm font-bold transition" data-i18n="Order Service"> Order Service </a> </div>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-surface-card border border-surface-border rounded-3xl p-8 hover:border-primary/50 hover:shadow-glow-orange transition duration-300 flex flex-col justify-between group">
+                        <div class="space-y-5">
+                            <div class="w-14 h-14 rounded-2xl bg-surface-subtle border border-surface-border flex items-center justify-center text-primary text-2xl group-hover:scale-110 transition"> <i class="fas fa-bullhorn"></i> </div>
+                            <h3 class="text-2xl font-bold text-white" data-i18n="Meta Ads Marketing">Meta Ads Marketing</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="Designing and scaling profitable Facebook &amp; Instagram ad campaigns with advanced pixel tracking, retargeting, and audience research."> Designing and scaling profitable Facebook &amp; Instagram ad campaigns with advanced pixel tracking, retargeting, and audience research. </p>
+                            <ul class="space-y-2 text-sm text-gray-300 pt-2">
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="High ROAS Ad Strategies">High ROAS Ad Strategies</span></li>
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="Pixel & CAPI Setup">Pixel &amp; CAPI Setup</span></li>
+                                <li class="flex items-center gap-2.5"><i class="fas fa-check text-primary text-xs"></i> <span data-i18n="A/B Testing & Scaling">A/B Testing &amp; Scaling</span></li>
+                            </ul>
+                        </div>
+                        <div class="pt-8"> <a href="#contact" class="block w-full text-center py-3 rounded-full bg-surface-subtle hover:bg-primary hover:text-black border border-surface-border text-white text-sm font-semibold transition" data-i18n="Order Service"> Order Service </a> </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==================== SKILLS SECTION ==================== -->
+            <section id="skills" class="space-y-12">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary" data-i18n="My Arsenal">My Arsenal</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white"><span data-i18n="My">My</span> <span class="text-primary" data-i18n="Skills">Skills</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Technical Development -->
+                    <div class="bg-surface-card border border-surface-border rounded-3xl p-8 space-y-6">
+                        <div class="flex items-center gap-3 border-b border-surface-border pb-4">
+                            <i class="fas fa-laptop-code text-primary text-xl"></i>
+                            <h3 class="text-xl font-bold text-white" data-i18n="Technical &amp; Development">Technical &amp; Development</h3>
+                        </div>
+                        <div class="space-y-5">
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="HTML5 / CSS3 / JavaScript">HTML5 / CSS3 / JavaScript</span>
+                                    <span class="text-primary">92%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--92 bg-primary h-full rounded-full" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="E-Commerce (Shopify / WooCommerce)">E-Commerce (Shopify / WooCommerce)</span>
+                                    <span class="text-primary">88%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--88 bg-primary h-full rounded-full" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="Responsive Web Design (UI/UX)">Responsive Web Design (UI/UX)</span>
+                                    <span class="text-primary">95%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--95 bg-primary h-full rounded-full" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="Performance &amp; Speed Optimization">Performance &amp; Speed Optimization</span>
+                                    <span class="text-primary">85%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--85 bg-primary h-full rounded-full" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Marketing & Meta Ads -->
+                    <div class="bg-surface-card border border-surface-border rounded-3xl p-8 space-y-6">
+                        <div class="flex items-center gap-3 border-b border-surface-border pb-4">
+                            <i class="fas fa-chart-pie text-primary text-xl"></i>
+                            <h3 class="text-xl font-bold text-white" data-i18n="Marketing &amp; Meta Ads">Marketing &amp; Meta Ads</h3>
+                        </div>
+                        <div class="space-y-5">
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="Meta Ads Manager (FB &amp; IG)">Meta Ads Manager (FB &amp; IG)</span>
+                                    <span class="text-primary">96%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--96 bg-primary h-full rounded-full" data-width="96%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="Meta Pixel &amp; Conversions API (CAPI)">Meta Pixel &amp; Conversions API (CAPI)</span>
+                                    <span class="text-primary">90%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--90 bg-primary h-full rounded-full" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="Conversion Rate Optimization (CRO)">Conversion Rate Optimization (CRO)</span>
+                                    <span class="text-primary">87%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--87 bg-primary h-full rounded-full" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-semibold mb-2">
+                                    <span data-i18n="Data Analytics &amp; Campaign Scaling">Data Analytics &amp; Campaign Scaling</span>
+                                    <span class="text-primary">89%</span>
+                                </div>
+                                <div class="w-full bg-surface-subtle h-2.5 rounded-full overflow-hidden">
+                                    <div class="skill-progress skill-progress--89 bg-primary h-full rounded-full" data-width="89%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==================== LATEST PROJECTS ==================== -->
+            <section id="projects" class="space-y-12">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary" data-i18n="Portfolio">Portfolio</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white"><span data-i18n="Latest">Latest</span> <span class="text-primary" data-i18n="Projects">Projects</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-surface-card border border-surface-border rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-glow-orange transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="h-48 flex items-center justify-center p-6 border-b border-surface-border relative overflow-hidden">
+                                <img src="e-commerc.jpg" alt="Fashion models representing the luxury e-commerce store project" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
+                                <div class="absolute inset-0 bg-black/45"></div>
+                                <span class="relative text-3xl font-extrabold text-white/80 group-hover:text-white transition duration-300" data-i18n="LUXURY STORE">LUXURY STORE</span>
+                                <a href="#contact" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white hover:text-primary transition"> <i class="fas fa-external-link-alt text-xs"></i> </a>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="Shopify">Shopify</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="Web Dev">Web Dev</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="CRO">CRO</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white group-hover:text-primary transition" data-i18n="E-Commerce Store">E-Commerce Store</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="Modern fashion e-commerce shop with high conversion checkout and mobile-first design."> Modern fashion e-commerce shop with high conversion checkout and mobile-first design. </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6"> <a href="#contact" class="inline-flex items-center gap-2 text-primary hover:text-white text-xs font-bold transition"> <span data-i18n="View Case Study">View Case Study</span> <i class="fas fa-arrow-right text-[10px]"></i> </a> </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-surface-card border border-surface-border rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-glow-orange transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="h-48 flex items-center justify-center p-6 border-b border-surface-border relative overflow-hidden">
+                                <img src="meta-ads.jpg" alt="Analytics dashboard representing the Meta Ads campaign project" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
+                                <div class="absolute inset-0 bg-black/60"></div>
+                                <div class="relative text-center">
+                                    <div class="text-4xl font-black text-primary text-glow">5.4x</div>
+                                    <div class="text-xs font-bold text-white uppercase tracking-widest mt-1" data-i18n="ROAS ACHIEVED">ROAS ACHIEVED</div>
+                                </div>
+                                <a href="#contact" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white hover:text-primary transition"> <i class="fas fa-external-link-alt text-xs"></i> </a>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="Meta Ads">Meta Ads</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border">CAPI</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="Scaling">Scaling</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white group-hover:text-primary transition" data-i18n="Meta Ads Campaign">Meta Ads Campaign</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="Targeted FB &amp; IG marketing campaign achieving 5.4x ROAS and +230% monthly sales increase."> Targeted FB &amp; IG marketing campaign achieving 5.4x ROAS and +230% monthly sales increase. </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6"> <a href="#contact" class="inline-flex items-center gap-2 text-primary hover:text-white text-xs font-bold transition"> <span data-i18n="View Case Study">View Case Study</span> <i class="fas fa-arrow-right text-[10px]"></i> </a> </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-surface-card border border-surface-border rounded-3xl overflow-hidden hover:border-primary/50 hover:shadow-glow-orange transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="h-48 flex items-center justify-center p-6 border-b border-surface-border relative overflow-hidden">
+                                <img src="leading-page.jpg" alt="Web design workspace representing the landing page project" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
+                                <div class="absolute inset-0 bg-black/45"></div>
+                                <span class="relative text-3xl font-extrabold text-white/80 group-hover:text-white transition duration-300" data-i18n="LANDING PAGE">LANDING PAGE</span>
+                                <a href="#contact" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white hover:text-primary transition"> <i class="fas fa-external-link-alt text-xs"></i> </a>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="HTML/CSS/JS">HTML/CSS/JS</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="UI/UX">UI/UX</span>
+                                    <span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-surface-subtle text-gray-300 border border-surface-border" data-i18n="Fast Load">Fast Load</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white group-hover:text-primary transition" data-i18n="High-Converting Landing Page">High-Converting Landing Page</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="Ultra-fast product landing page with dynamic interactive elements and high opt-in rate."> Ultra-fast product landing page with dynamic interactive elements and high opt-in rate. </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6"> <a href="#contact" class="inline-flex items-center gap-2 text-primary hover:text-white text-xs font-bold transition"> <span data-i18n="View Case Study">View Case Study</span> <i class="fas fa-arrow-right text-[10px]"></i> </a> </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==================== CONTACT SECTION ==================== -->
+            <section id="contact" class="space-y-12">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-primary" data-i18n="Get In Touch">Get In Touch</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white"><span data-i18n="Contact">Contact</span> <span class="text-primary" data-i18n="Me!">Me!</span></h2>
+                </div>
+                <div class="bg-surface-card border border-surface-border rounded-3xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <!-- Direct Communication Channels -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-bold text-white" data-i18n="Let&#x27;s Work Together">Let's Work Together</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="Have a project in mind or want to scale your business? Send a message and let&#x27;s get started."> Have a project in mind or want to scale your business? Send a message and let's get started. </p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-surface-subtle border border-surface-border hover:border-primary/40 transition">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-lg"> <i class="fas fa-envelope"></i> </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-semibold" data-i18n="Email">Email</p>
+                                    <a href="mailto:chnakhtensloven@gmail.com" class="text-sm font-bold text-white hover:text-primary transition">chnakhtensloven@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-surface-subtle border border-surface-border hover:border-primary/40 transition">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-lg"> <i class="fas fa-phone-alt"></i> </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-semibold" data-i18n="Phone / WhatsApp">Phone / WhatsApp</p>
+                                    <a href="https://wa.me/213563277037" target="_blank" class="text-sm font-bold text-white hover:text-primary transition">+213563277037</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-surface-subtle border border-surface-border hover:border-primary/40 transition">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-lg"> <i class="fas fa-map-marker-alt"></i> </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-semibold" data-i18n="Location">Location</p>
+                                    <p class="text-sm font-bold text-white" data-i18n="Alger, Algeria">Alger, Algeria</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-gray-400">
+                            <i class="fas fa-shield-alt text-primary"></i>
+                            <span data-i18n="Fast response time guaranteed within 24 hours">Fast response time guaranteed within 24 hours</span>
+                        </div>
+                    </div>
+                    <!-- Contact Form with JavaScript Submission Handler -->
+                    <div class="lg:col-span-7">
+                        <form id="contact-form" class="space-y-5">
+                            <div class="space-y-2">
+                                <label for="contact-email" class="text-xs font-bold text-gray-300 uppercase tracking-wider" data-i18n="Email Address">Email Address</label>
+                                <input id="contact-email" type="email" required placeholder="your.name@example.com" data-i18n-placeholder="your.name@example.com" class="w-full bg-surface-subtle border border-surface-border rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition text-sm" />
+                            </div>
+                            <div class="space-y-2">
+                                <label for="contact-message" class="text-xs font-bold text-gray-300 uppercase tracking-wider" data-i18n="Your Message">Your Message</label>
+                                <textarea id="contact-message" rows="5" required placeholder="Tell me about your project, target audience, or campaign goals..." data-i18n-placeholder="Tell me about your project, target audience, or campaign goals..." class="w-full bg-surface-subtle border border-surface-border rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition text-sm resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-full bg-primary hover:bg-primary-hover text-black font-extrabold text-sm uppercase tracking-wider transition shadow-glow-orange hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"> <span id="btn-text" data-i18n="Send Message">Send Message</span> <i class="fas fa-paper-plane text-xs"></i> </button>
+                            <p id="form-status" class="hidden text-sm text-center text-primary font-semibold pt-2" data-i18n="Thank you! Your message has been sent successfully.">Thank you! Your message has been sent successfully.</p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="border-t border-surface-border py-8 bg-surface-subtle/50 mt-24">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full p-[1.5px] bg-gradient-to-tr from-primary to-primary-glow">
+                        <img src="hhh.jpg" alt="nasrou hm" class="w-full h-full object-cover rounded-full" data-fallback-src="https://.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=150&amp;q=80" />
+                    </div>
+                    <p><span data-i18n="Copyright © 2026 by">Copyright © 2026 by</span> <strong class="text-gray-300 font-semibold">nasrou hm</strong> <span data-i18n="| All Rights Reserved.">| All Rights Reserved.</span></p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition"><i class="fab fa-github text-base"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition"><i class="fab fa-linkedin text-base"></i></a>
+                    <a href="https://wa.me/213563277037" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition"><i class="fab fa-whatsapp text-base"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition"><i class="fab fa-instagram text-base"></i></a>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+</body>
+</html>
