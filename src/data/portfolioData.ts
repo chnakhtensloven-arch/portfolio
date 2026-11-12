@@ -45,7 +45,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     imageAltKey: 'Fashion models representing the luxury e-commerce store project',
     badge: {
       value: 'LUXURY STORE',
-      labelKey: 'Shopify'
+      labelKey: 'store 100% dz'
     },
     metrics: [
       { labelKey: 'Fast Page Load Speed', value: '0.8s' },
@@ -60,30 +60,39 @@ export const PROJECTS_DATA: ProjectData[] = [
       'Responsive & Mobile-First'
     ]
   },
-  {
-    id: 'meta-ads-campaign',
-    titleKey: 'Meta Ads Campaign',
-    categoryKeys: ['Meta Ads', 'CAPI', 'Scaling'],
-    descriptionKey: 'Targeted FB & IG marketing campaign achieving 5.4x ROAS and +230% monthly sales increase.',
-    image: '/meta-ads.jpg',
-    imageAltKey: 'Analytics dashboard representing the Meta Ads campaign project',
-    badge: {
-      value: '5.4x',
-      labelKey: 'ROAS ACHIEVED'
-    },
-    metrics: [
-      { labelKey: 'Average ROAS', value: '5.4x' },
-      { labelKey: 'Data Analytics & Campaign Scaling', value: '+230%' },
-      { labelKey: 'Pixel & CAPI Setup', value: '100%' }
-    ],
-    detailsKey: 'Hyper-targeted Meta Ads strategy covering dynamic creative testing, deep audience segmentation, Conversion API server tracking, and high-margin scale pipelines.',
-    deliverablesKeys: [
-      'High ROAS Ad Strategies',
-      'Pixel & CAPI Setup',
-      'A/B Testing & Scaling',
-      'Data Analytics & Campaign Scaling'
-    ]
+  
+{
+  id: 'dar-fix-home',
+  titleKey: 'Dar Fix - Home Maintenance Website',
+  externalUrl: 'https://dar-fix.vercel.app/',
+  categoryKeys: [
+    'Web Development',
+    'UI/UX',
+    'Business Website'
+  ],
+  descriptionKey: 'Modern home maintenance platform connecting customers with professional repair services.',
+  image: '/meta-ads.png',
+  imageAltKey: 'Dar Fix home maintenance website preview',
+  badge: {
+    value: '3D',
+    labelKey: 'INTERACTIVE HOME EXPERIENCE'
   },
+  metrics: [
+    { labelKey: 'Interactive 3D Home', value: '3D' },
+    { labelKey: 'Responsive Design', value: 'Mobile-first' },
+    { labelKey: 'Request Management', value: 'Dashboard' }
+  ],
+  detailsKey: 'A modern home maintenance platform featuring an interactive 3D house experience, service discovery, customer request forms and an admin dashboard.',
+  deliverablesKeys: [
+    'Modern UI/UX Design',
+    'Interactive 3D House',
+    'Home Maintenance Services',
+    'Customer Request System',
+    'Admin Dashboard',
+    'Responsive Mobile Design',
+    'Supabase Integration'
+  ]
+},
   {
     id: 'landing-page',
     titleKey: 'High-Converting Landing Page',
