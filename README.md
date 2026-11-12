@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Web Developer | E-commerce & AI Automation
 
-# Run and deploy your AI Studio app
+Hi! I'm a Web Developer from Algeria 🇩🇿
 
-This contains everything you need to run your app locally.
+I specialize in building modern, responsive websites
+and e-commerce applications.
 
-View your app in AI Studio: https://ai.studio/apps/7edbdec8-9fe7-4dd6-86a9-083426bc695f
+## Technical Skills
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+- TypeScript
+- Supabase
+- Git & GitHub
+- API Integration
 
-## Run Locally
+## Featured Projects
+- E-commerce Platforms
+- Business Websites
+- Home Maintenance Website
+- Interactive Web Applications
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Portfolio
+https://nasrou-hm-portfolio.vercel.app/
